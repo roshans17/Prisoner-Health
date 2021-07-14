@@ -1,0 +1,153 @@
+body{
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+}
+
+:root{
+    font: 20px/1.2 "sans-serif";
+}
+
+h1{
+    font: 700 2rem/1.2 "sans-serif";
+    color: hsl(000, 0%,33%);
+}
+
+h2{ 
+    font: 400 1.5rem/1.2 "sans-serif";
+    color: hsl(000, 0%,33%);
+}
+
+time{ 
+    font: 700 1.0rem/1.2 "sans-serif";
+    color: hsl(250, 100%,83%);
+}
+
+
+p{
+    font: 400 1.0rem/1.5 "sans-serif";
+    color: hsl(000, 0%,33%);
+}
+
+article a {
+    text-decoration: none;
+    color: hsl(000, 0%,33%);
+}
+
+article {
+	display: grid;
+	grid-template-columns: 1fr 0.5in [start] 1.25in 5in 1.25in [end] 0.5in 1fr;
+
+	padding: 0.5in 0;
+}
+
+article * { grid-column: start / end; }
+
+@media (max-width: 8.5in) {
+	article { grid-template-columns: 1fr 5% [start] 15% 60% 15% [end] 5% 1fr; }
+    :root { font-size: 18px; }
+}
+
+@media (max-width: 5.0in){
+    :root { font-size: 16px; }
+}
+
+.size-1{
+    grid-column: 1/8;
+}
+
+.size-1 img{
+    width: 100%
+}
+
+figcaption{
+    display: flex;
+    justify-content: center;
+}
+figcaption p{
+    color: hsla(000, 0%,83%);
+}
+
+
+
+a {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+  }
+  a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: black;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  a:hover:after { 
+    width: 100%; 
+    left: 0; 
+  }
+
+/*
+for nav bar
+*/
+
+header{
+    box-shadow: 0px 3px 10px rgba(0,0,0, 0.3);
+    position: sticky;
+    top: 0px;
+    background: white;
+    z-index: 3;
+}
+
+nav{
+    min-height: 10vh;
+    margin: auto;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav a{
+    color: black;
+    text-decoration: none;
+    border: 1px solid transparent;
+    padding: 7px 10px;
+    border-radius: 3px;
+    font-size: 12px;
+    position: relative;
+}
+
+
+nav h1, nav ul {
+    font-size: 1.5rem;
+    flex: 1;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+/* 
+nav ul li.active {
+    border: rgb(131, 115, 115);
+    transition: 0.7s ease border;
+}
+nav ul li:hover {
+    background-color: blanchedalmond;
+}
+nav ul li.active a {
+    border-bottom: 2px solid rgb(255, 0, 0);
+} */
