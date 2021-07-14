@@ -326,3 +326,7 @@ section h2 {
   margin: 20px auto;
   border-radius: 10px;
 }
+
+@media (max-width: 8.0in) {
+    :root { font-size: 12px; }
+}
