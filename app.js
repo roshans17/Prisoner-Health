@@ -31,6 +31,15 @@ function scrollAppear(){
     var blogPostPos = blogPost.getBoundingClientRect().top;
     var blogTitle = document.querySelector('.blog-title');
     var blogTitlePos = blogTitle.getBoundingClientRect().top;
+    var introAboutMe = document.querySelector('.intro');
+    var introAboutMePos = introAboutMe.getBoundingClientRect().top;
+    var purposeAboutMe = document.querySelector('.purpose');
+    var purposeAboutMePos = purposeAboutMe.getBoundingClientRect().top;
+    var aboutMeImg = document.querySelector('.about-me-image');
+    var aboutMeImgPos = aboutMeImg.getBoundingClientRect().top;
+    var aboutMeHeader = document.querySelector('.about-me-header');
+    var aboutMeHeaderPos = aboutMeHeader.getBoundingClientRect().top;
+
 
     if(captionPos < screenPosition){
         blogCaption.classList.add('blog-post-caption-appear');
@@ -40,6 +49,18 @@ function scrollAppear(){
     }
     if(blogTitlePos < screenPosition){
         blogTitle.classList.add('blog-title-appear');
+    }
+    if(introAboutMePos< screenPosition){
+      introAboutMe.classList.add('intro-appear');
+    }
+    if(purposeAboutMePos < screenPosition){
+      purposeAboutMe.classList.add('purpose-appear');
+    }
+    if(aboutMeImgPos < screenPosition){
+      aboutMeImg.classList.add('about-me-image-appear');
+    }
+    if(aboutMeHeaderPos < screenPosition){
+      aboutMeHeader.classList.add('about-me-header-appear');
     }
 }
 
@@ -53,6 +74,7 @@ window.addEventListener('scroll', scrollAppear);
 const sections = document.querySelectorAll("section");
 const navLi = document.querySelectorAll("nav ul li")
 window.addEventListener("scroll",() => {
+
     let current = "";
     sections.forEach((section) => {
       const sectionTop = section.offsetTop;
