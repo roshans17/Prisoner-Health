@@ -1,6 +1,6 @@
 import React from "react";
 //Import Pages
-import InitialPages from "./Pages/IntialPages";
+import InitialPages from "./Pages/InitialPages";
 
 function App() {
   return (
