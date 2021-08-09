@@ -1,12 +1,18 @@
 import React from "react";
+//Styled
+import styled from "styled-components";
 //Import icons
 import biotech from "../Images/biotech.svg";
 import community from "../Images/community.svg";
 import health from "../Images/health.svg";
+import notebooks from "../Images/studying.svg";
 
 const Motivation = () => {
   return (
-    <div className="motivation">
+    <StyledMotivation>
+      {/* <StyledImage>
+        <img src={notebooks} alt="picture of notebooks/studing" />
+      </StyledImage> */}
       <h1>Why you should learn about the health of prisoners: </h1>
       <div className="reason-1">
         <div className="img">
@@ -37,8 +43,32 @@ const Motivation = () => {
           friend, and loved one. more words....
         </p>
       </div>
-    </div>
+    </StyledMotivation>
   );
 };
+
+const StyledMotivation = styled.div`
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5rem;
+  h1 {
+    display: flex;
+    padding-bottom: 10rem;
+    font-weight: 500;
+  }
+`;
+
+const StyledImage = styled.div`
+  position: relative;
+  img {
+    position: absolute;
+width: 1134.1px;
+height: 1008.79px;
+left: 968.1px;
+top: -150px;
+  }
+`;
 
 export default Motivation;
